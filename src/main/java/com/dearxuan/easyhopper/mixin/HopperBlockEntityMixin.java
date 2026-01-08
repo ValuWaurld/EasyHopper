@@ -51,7 +51,7 @@ public abstract class HopperBlockEntityMixin extends LootableContainerBlockEntit
             cancellable = true
     )
     private static void injectInsertAndExtract(World world, BlockPos pos, BlockState state, HopperBlockEntity blockEntity, BooleanSupplier booleanSupplier, CallbackInfoReturnable<Boolean> info){
-        if (world.isClient) {
+        if (world.isClient()) {
             info.setReturnValue(false);
         } else {
             IHopperBlockEntityMixin iHopperBlockEntity = (IHopperBlockEntityMixin) blockEntity;
