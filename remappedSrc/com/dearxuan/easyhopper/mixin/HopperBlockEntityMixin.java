@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.function.BooleanSupplier;
 import java.util.stream.IntStream;
 
-@Mixin(HopperBlockEntity.class)
+@Mixin(value = HopperBlockEntity.class, priority = 500)
 public abstract class HopperBlockEntityMixin extends LootableContainerBlockEntity {
     @Shadow
     private int transferCooldown;

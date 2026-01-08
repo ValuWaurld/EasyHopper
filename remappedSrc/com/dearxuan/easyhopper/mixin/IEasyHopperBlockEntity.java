@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 
 import java.util.function.BooleanSupplier;
 
-@Mixin(HopperBlockEntity.class)
+@Mixin(value = HopperBlockEntity.class, priority = 500)
 interface IEasyHopperBlockEntity {
 
     @Accessor("inventory")

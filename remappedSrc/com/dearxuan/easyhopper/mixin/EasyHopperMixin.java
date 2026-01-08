@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.function.BooleanSupplier;
 import java.util.stream.IntStream;
 
-@Mixin(HopperBlockEntity.class)
+@Mixin(value = HopperBlockEntity.class, priority = 500)
 public abstract class EasyHopperMixin extends LootableContainerBlockEntity {
     @Shadow
     private int transferCooldown;
